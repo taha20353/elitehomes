@@ -1,0 +1,13 @@
+/* Font Awesome Free 6.4.0 icons, rendered as static SVG.
+   https://fontawesome.com/license/free - Icons: CC BY 4.0. */
+.svg-inline--fa {
+   display: inline-block;
+   height: 1em;
+   overflow: visible;
+   vertical-align: -.125em;
+   box-sizing: content-box;
+}
+
+.svg-inline--fa.fa-flip-horizontal {
+   transform: scale(-1, 1);
+}

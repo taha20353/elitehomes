@@ -1,0 +1,293 @@
+/* property modal */
+
+.property-modal .modal-dialog {
+  max-width: 1100px;
+}
+
+@media (max-width:991.98px) {
+  .property-modal .modal-dialog {
+    max-width: 640px;
+    margin-inline: auto;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width:575.98px) {
+  .property-modal .modal-dialog {
+    margin-block: 8px;
+  }
+}
+
+.property-modal .modal-content {
+  border: 0;
+  border-radius: 18px;
+  color: #202235;
+}
+
+@media (max-width:575.98px) {
+  .property-modal .modal-content {
+    border-radius: 14px;
+  }
+}
+
+.property-modal .btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  width: 1rem;
+  height: 1rem;
+  padding: 11px;
+  border: 1px solid #e8e8f0;
+  border-radius: 50%;
+  background-color: var(--white);
+  background-size: 14px;
+  opacity: 1;
+  box-shadow: 0 3px 12px #0000000f;
+}
+
+.property-modal .btn-close:focus-visible, .property-modal .property-inquiry:focus-visible {
+  outline: 3px solid var(--purple-700);
+  outline-offset: 3px;
+}
+
+.property-modal .property-inquiry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 14px 17px;
+  border-radius: 9px;
+  color: var(--white);
+  background: var(--purple-700);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.property-modal .property-inquiry:hover {
+  color: var(--white);
+  background: var(--purple-900);
+}
+
+.property-visual {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #f7f7fb;
+}
+
+@media (max-width:991.98px) {
+  .property-visual {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width:575.98px) {
+  .property-visual {
+    aspect-ratio: 1.3;
+  }
+}
+
+.property-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-visual::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, #101622a3);
+  pointer-events: none;
+}
+
+.property-visual > span {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--white);
+  color: #351964;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@media (max-width:575.98px) {
+  .property-visual > span {
+    top: 18px;
+    left: 18px;
+  }
+}
+
+.listing-location {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  z-index: 1;
+  color: var(--white);
+}
+
+@media (max-width:575.98px) {
+  .listing-location {
+    left: 22px;
+    bottom: 22px;
+  }
+}
+
+.listing-location p {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.listing-location span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ffffffd1;
+}
+
+.listing-info {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 32px 26px;
+}
+
+@media (max-width:991.98px) {
+  .listing-info {
+    padding: 26px;
+  }
+}
+
+@media (max-width:575.98px) {
+  .listing-info {
+    padding: 24px;
+  }
+}
+
+.listing-info > div:first-child {
+  padding-right: 18px;
+}
+
+@media (max-width:991.98px) {
+  .listing-info > div:first-child {
+    padding-right: 0;
+  }
+}
+
+.property-modal .modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -.7px;
+}
+
+@media (max-width:575.98px) {
+  .property-modal .modal-title {
+    font-size: 26px;
+  }
+}
+
+.listing-info > div:first-child p {
+  margin-top: 12px;
+  color: #737584;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.price-block {
+  margin: 25px 0 23px;
+}
+
+:is(.price-block, .listing-agent) p:first-child {
+  color: #737584;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.asking-price {
+  margin-top: 5px;
+  color: #202235;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.property-modal dl {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  margin: 0 0 22px;
+  padding: 19px 0;
+  border-block: 1px solid #e8e8f0;
+}
+
+.property-modal dl > div + div {
+  padding-left: 16px;
+  border-left: 1px solid #e8e8f0;
+}
+
+.property-modal dl dt {
+  color: #737584;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.property-modal dl dd {
+  margin: 7px 0 0;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -.5px;
+}
+
+.listing-description {
+  margin: 0 0 24px;
+  color: #5f6371;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.listing-contact {
+  margin-top: auto;
+}
+
+@media (max-width:991.98px) {
+  .listing-contact {
+    margin-top: 0;
+  }
+}
+
+.listing-agent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 21px;
+  margin-bottom: 21px;
+  border-top: 1px solid #e8e8f0;
+}
+
+.listing-agent img {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.listing-agent p + p {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}

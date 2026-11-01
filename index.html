@@ -1,0 +1,3153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="./favicon.png"/>
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./style/icons.css" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+      EliteHomes
+    </title>
+    <link href="./style/style.css" rel="stylesheet"/>
+    <link href="./style/property-details.css" rel="stylesheet"/>
+  </head>
+  <body class="page-body" data-bs-root-margin="-15% 0px -65% 0px" data-bs-spy="scroll" data-bs-target="#desktop-navigation">
+    <svg aria-hidden="true" class="svg-definitions" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="rating-star" viewbox="0 0 576 512">
+        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" fill="currentColor">
+        </path>
+      </symbol>
+    </svg>
+    <!-- header -->
+    <header class="bg-white position-fixed w-100 site-header" id="header">
+      <div class="container mx-auto px-4">
+        <div class="d-flex align-items-center justify-content-between header-bar">
+          <div class="d-flex align-items-center">
+            <a aria-label="EliteHomes home" class="fw-bold site-brand" href="#hero-section">
+              EliteHomes
+            </a>
+          </div>
+          <nav class="d-none d-lg-flex align-items-center site-nav" id="desktop-navigation">
+            <a class="nav-link fw-medium position-relative pb-1 site-nav-link" href="#hero-section">
+              Home
+            </a>
+            <div class="position-relative dropdown" id="desktop-properties-dropdown">
+              <button aria-controls="desktop-mega-menu" aria-expanded="false" class="nav-link fw-medium position-relative pb-1 d-flex align-items-center bg-transparent border-0 site-nav-link" data-bs-display="static" data-bs-toggle="dropdown" id="desktop-properties-toggle" type="button">
+                Properties
+                <i class="ms-2 nav-chevron">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="position-absolute bg-white p-4 mt-2 mega-menu dropdown-menu" id="desktop-mega-menu">
+                <div class="row content-grid">
+                  <div class="col-3">
+                    <div>
+                      <h3 class="fw-semibold mb-3 card-title">
+                        Featured Properties
+                      </h3>
+                      <div class="menu-stack">
+                        <a class="d-block featured-listing" href="#featured-properties">
+                          <div class="d-flex align-items-center">
+                            <img alt="Luxury Home" class="object-fit-cover featured-listing-photo" src="./images/luxury-villa.jpeg"/>
+                            <div class="listing-summary">
+                              <h4 class="fw-medium menu-item-title">
+                                Luxury Villa
+                              </h4>
+                              <p class="small-text">
+                                $2.5M • 5 beds • 4 baths
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="d-block featured-listing" href="#featured-properties">
+                          <div class="d-flex align-items-center">
+                            <img alt="Modern Apartment" class="object-fit-cover featured-listing-photo" src="./images/modern-apartment.jpeg"/>
+                            <div class="listing-summary">
+                              <h4 class="fw-medium menu-item-title">
+                                Modern Apartment
+                              </h4>
+                              <p class="small-text">
+                                $850K • 2 beds • 2 baths
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>
+                      <h3 class="fw-semibold mb-3 card-title">
+                        Property Types
+                      </h3>
+                      <ul class="menu-list">
+                        <li>
+                          <a class="d-flex align-items-center property-type-link" href="#featured-properties">
+                            <i class="property-type-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                            <span>
+                              Single Family Homes
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="d-flex align-items-center property-type-link" href="#featured-properties">
+                            <i class="property-type-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                            <span>
+                              Apartments
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="d-flex align-items-center property-type-link" href="#featured-properties">
+                            <i class="property-type-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 488V171.3c0-26.2 15.9-49.7 40.2-59.4L308.1 4.8c7.6-3.1 16.1-3.1 23.8 0L599.8 111.9c24.3 9.7 40.2 33.3 40.2 59.4V488c0 13.3-10.7 24-24 24H568c-13.3 0-24-10.7-24-24V224c0-17.7-14.3-32-32-32H128c-17.7 0-32 14.3-32 32V488c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm488 24l-336 0c-13.3 0-24-10.7-24-24V432H512l0 56c0 13.3-10.7 24-24 24zM128 400V336H512v64H128zm0-96V224H512l0 80H128z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                            <span>
+                              Condominiums
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="d-flex align-items-center property-type-link" href="#featured-properties">
+                            <i class="property-type-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                            <span>
+                              Commercial
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="d-flex align-items-center property-type-link" href="#featured-properties">
+                            <i class="property-type-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208H104L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320H80L5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5H192v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448H424.5c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320h33.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208h24.9c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                            <span>
+                              Land &amp; Lots
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>
+                      <h3 class="fw-semibold mb-3 card-title">
+                        Popular Locations
+                      </h3>
+                      <div class="menu-list">
+                        <a class="d-block location-link" href="#featured-properties">
+                          <div class="position-relative overflow-hidden location-tile city-new-york">
+                            <div class="position-absolute location-overlay">
+                            </div>
+                            <div class="position-absolute p-3 d-flex flex-column justify-content-center location-caption">
+                              <span class="text-white fw-semibold location-name">
+                                New York
+                              </span>
+                              <span class="location-count">
+                                2,145 Properties
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="d-block location-link" href="#featured-properties">
+                          <div class="position-relative overflow-hidden location-tile city-los-angeles">
+                            <div class="position-absolute location-overlay">
+                            </div>
+                            <div class="position-absolute p-3 d-flex flex-column justify-content-center location-caption">
+                              <span class="text-white fw-semibold location-name">
+                                Los Angeles
+                              </span>
+                              <span class="location-count">
+                                1,873 Properties
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="d-block location-link" href="#featured-properties">
+                          <div class="position-relative overflow-hidden location-tile city-miami">
+                            <div class="position-absolute location-overlay">
+                            </div>
+                            <div class="position-absolute p-3 d-flex flex-column justify-content-center location-caption">
+                              <span class="text-white fw-semibold location-name">
+                                Miami
+                              </span>
+                              <span class="location-count">
+                                1,526 Properties
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div>
+                      <h3 class="fw-semibold mb-3 card-title">
+                        Resources
+                      </h3>
+                      <div class="menu-stack">
+                        <a class="resource-card d-block position-relative overflow-hidden resource-buying" href="#services-tabs">
+                          <div class="resource-body">
+                            <div class="d-flex align-items-center card-summary">
+                              <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                                <i class="resource-symbol">
+                                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" fill="currentColor">
+                                    </path>
+                                  </svg>
+                                </i>
+                              </div>
+                              <h4 class="resource-title fw-semibold">
+                                Buying Guide
+                              </h4>
+                            </div>
+                            <p class="muted">
+                              Essential tips and strategies for first-time
+                                                                                                                homebuyers
+                            </p>
+                            <div class="d-flex align-items-center resource-action">
+                              <span class="fw-medium resource-action-caption">
+                                Learn More
+                              </span>
+                              <i class="ms-2 resource-arrow">
+                                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor">
+                                  </path>
+                                </svg>
+                              </i>
+                            </div>
+                          </div>
+                          <div class="position-absolute rounded-pill opacity-50 resource-decoration">
+                          </div>
+                        </a>
+                        <a class="resource-card d-block position-relative overflow-hidden resource-investment" href="#services-tabs">
+                          <div class="resource-body">
+                            <div class="d-flex align-items-center card-summary">
+                              <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                                <i class="resource-symbol">
+                                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z" fill="currentColor">
+                                    </path>
+                                  </svg>
+                                </i>
+                              </div>
+                              <h4 class="resource-title fw-semibold">
+                                Investment Tips
+                              </h4>
+                            </div>
+                            <p class="muted">
+                              Smart strategies for property investment success
+                            </p>
+                            <div class="d-flex align-items-center resource-action">
+                              <span class="fw-medium resource-action-caption">
+                                Learn More
+                              </span>
+                              <i class="ms-2 resource-arrow">
+                                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor">
+                                  </path>
+                                </svg>
+                              </i>
+                            </div>
+                          </div>
+                          <div class="position-absolute rounded-pill opacity-50 resource-decoration">
+                          </div>
+                        </a>
+                        <a class="resource-card d-block position-relative overflow-hidden resource-reports" href="#services-tabs">
+                          <div class="resource-body">
+                            <div class="d-flex align-items-center card-summary">
+                              <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                                <i class="resource-symbol">
+                                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="currentColor">
+                                    </path>
+                                  </svg>
+                                </i>
+                              </div>
+                              <h4 class="resource-title fw-semibold">
+                                Market Reports
+                              </h4>
+                            </div>
+                            <p class="muted">
+                              In-depth analysis of real estate market trends
+                            </p>
+                            <div class="d-flex align-items-center resource-action">
+                              <span class="fw-medium resource-action-caption">
+                                Learn More
+                              </span>
+                              <i class="ms-2 resource-arrow">
+                                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor">
+                                  </path>
+                                </svg>
+                              </i>
+                            </div>
+                          </div>
+                          <div class="position-absolute rounded-pill opacity-50 resource-decoration">
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="nav-link fw-medium position-relative pb-1 site-nav-link" href="#services-tabs">
+              Services
+            </a>
+            <a class="nav-link fw-medium position-relative pb-1 site-nav-link" href="#testimonials">
+              Testimonials
+            </a>
+            <a class="nav-link fw-medium position-relative pb-1 site-nav-link" href="#faq-section">
+              FAQ
+            </a>
+            <a class="nav-link fw-medium position-relative pb-1 site-nav-link" href="#contact-section">
+              Contact
+            </a>
+          </nav>
+          <button aria-controls="mobile-menu" aria-label="Toggle navigation" class="d-lg-none menu-toggle" data-bs-target="#mobile-menu" data-bs-toggle="offcanvas" id="mobile-menu-button" type="button">
+            <svg class="menu-toggle-symbol" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              </path>
+              <path d="M6 18L18 6M6 6l12 12" id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div aria-label="Mobile navigation" class="d-lg-none pb-3 mobile-menu offcanvas offcanvas-top" data-bs-scroll="true" id="mobile-menu" tabindex="-1">
+        <nav class="d-flex flex-column pt-3 mobile-nav">
+          <div data-bs-dismiss="offcanvas">
+            <a class="mobile-nav-link fw-medium px-3 mobile-menu-link d-block" href="#hero-section">
+              Home
+            </a>
+          </div>
+          <div class="mobile-dropdown">
+            <button aria-controls="mobile-submenu-0" aria-expanded="false" class="mobile-dropdown-button w-100 text-start fw-medium px-3 d-flex align-items-center justify-content-between mobile-menu-link" data-bs-target="#mobile-submenu-0" data-bs-toggle="collapse" type="button">
+              <span>
+                Properties
+              </span>
+              <i class="mobile-nav-chevron">
+                <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </button>
+            <div class="mobile-dropdown-menu overflow-auto mt-2 px-2 mobile-submenu collapse" id="mobile-submenu-0">
+              <div class="p-3 mobile-menu-section">
+                <h3 class="fw-bold card-title">
+                  Featured Properties
+                </h3>
+                <div class="d-flex inline-cluster">
+                  <div data-bs-dismiss="offcanvas">
+                    <a class="d-block bg-white p-2 mobile-featured-listing" href="#featured-properties">
+                      <div class="d-flex align-items-center">
+                        <img alt="Luxury Home" class="object-fit-cover featured-listing-photo" src="./images/luxury-villa.jpeg"/>
+                        <div class="listing-summary">
+                          <h4 class="fw-medium menu-item-title">
+                            Luxury Villa
+                          </h4>
+                          <p class="small-text">
+                            $2.5M • 5 beds • 4 baths
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div data-bs-dismiss="offcanvas">
+                    <a class="d-block bg-white p-2 mobile-featured-listing" href="#featured-properties">
+                      <div class="d-flex align-items-center">
+                        <img alt="Modern Apartment" class="object-fit-cover featured-listing-photo" src="./images/modern-apartment.jpeg"/>
+                        <div class="listing-summary">
+                          <h4 class="fw-medium menu-item-title">
+                            Modern Apartment
+                          </h4>
+                          <p class="small-text">
+                            $850K • 2 beds • 2 baths
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mobile-menu-section">
+                <h3 class="fw-bold card-title">
+                  Property Types
+                </h3>
+                <ul class="row mobile-property-grid">
+                  <li class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-flex align-items-center property-type-link d-block" href="#featured-properties">
+                        <i class="property-type-symbol">
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                        <span>
+                          Single Family Homes
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-flex align-items-center property-type-link d-block" href="#featured-properties">
+                        <i class="property-type-symbol">
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                        <span>
+                          Apartments
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-flex align-items-center property-type-link d-block" href="#featured-properties">
+                        <i class="property-type-symbol">
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 488V171.3c0-26.2 15.9-49.7 40.2-59.4L308.1 4.8c7.6-3.1 16.1-3.1 23.8 0L599.8 111.9c24.3 9.7 40.2 33.3 40.2 59.4V488c0 13.3-10.7 24-24 24H568c-13.3 0-24-10.7-24-24V224c0-17.7-14.3-32-32-32H128c-17.7 0-32 14.3-32 32V488c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm488 24l-336 0c-13.3 0-24-10.7-24-24V432H512l0 56c0 13.3-10.7 24-24 24zM128 400V336H512v64H128zm0-96V224H512l0 80H128z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                        <span>
+                          Condominiums
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-flex align-items-center property-type-link d-block" href="#featured-properties">
+                        <i class="property-type-symbol">
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                        <span>
+                          Commercial
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-flex align-items-center property-type-link d-block" href="#featured-properties">
+                        <i class="property-type-symbol">
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208H104L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320H80L5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5H192v32c0 17.7 14.3 32 32 32s32-14.3 32-32V448H424.5c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320h33.4c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208h24.9c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                        <span>
+                          Land &amp; Lots
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-3 mobile-menu-section">
+                <h3 class="fw-bold card-title">
+                  Popular Locations
+                </h3>
+                <div class="row compact-grid">
+                  <div class="col-4">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block location-link" href="#featured-properties">
+                        <div class="position-relative overflow-hidden location-tile city-new-york">
+                          <div class="position-absolute location-overlay">
+                          </div>
+                          <div class="position-absolute d-flex flex-column justify-content-center location-caption">
+                            <span class="text-white fw-semibold mobile-location-name">
+                              New York
+                            </span>
+                            <span class="location-count">
+                              2,145 Properties
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block location-link" href="#featured-properties">
+                        <div class="position-relative overflow-hidden location-tile city-los-angeles">
+                          <div class="position-absolute location-overlay">
+                          </div>
+                          <div class="position-absolute d-flex flex-column justify-content-center location-caption">
+                            <span class="text-white fw-semibold mobile-location-name">
+                              Los Angeles
+                            </span>
+                            <span class="location-count">
+                              1,873 Properties
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block location-link" href="#featured-properties">
+                        <div class="position-relative overflow-hidden location-tile city-miami">
+                          <div class="position-absolute location-overlay">
+                          </div>
+                          <div class="position-absolute d-flex flex-column justify-content-center location-caption">
+                            <span class="text-white fw-semibold mobile-location-name">
+                              Miami
+                            </span>
+                            <span class="location-count">
+                              1,526 Properties
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mobile-menu-section">
+                <h3 class="fw-bold card-title">
+                  Resources
+                </h3>
+                <div class="row compact-grid">
+                  <div class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block bg-white resource-card resource-buying" href="#services-tabs">
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                            <i class="mobile-resource-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <h4 class="fw-semibold ms-2 resource-title">
+                            Buying Guide
+                          </h4>
+                        </div>
+                        <p class="mobile-resource-summary">
+                          Essential tips and strategies for first-time homebuyers
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block bg-white resource-card resource-investment" href="#services-tabs">
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                            <i class="mobile-resource-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <h4 class="fw-semibold ms-2 resource-title">
+                            Investment Tips
+                          </h4>
+                        </div>
+                        <p class="mobile-resource-summary">
+                          Smart strategies for property investment success
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div data-bs-dismiss="offcanvas">
+                      <a class="d-block bg-white resource-card resource-reports" href="#services-tabs">
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="rounded-pill d-flex align-items-center justify-content-center resource-badge">
+                            <i class="mobile-resource-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <h4 class="fw-semibold ms-2 resource-title">
+                            Market Reports
+                          </h4>
+                        </div>
+                        <p class="mobile-resource-summary">
+                          In-depth analysis of real estate market trends
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-bs-dismiss="offcanvas">
+            <a class="mobile-nav-link fw-medium px-3 mobile-menu-link d-block" href="#services-tabs">
+              Services
+            </a>
+          </div>
+          <div data-bs-dismiss="offcanvas">
+            <a class="mobile-nav-link fw-medium px-3 mobile-menu-link d-block" href="#testimonials">
+              Testimonials
+            </a>
+          </div>
+          <div data-bs-dismiss="offcanvas">
+            <a class="mobile-nav-link fw-medium px-3 mobile-menu-link d-block" href="#faq-section">
+              FAQ
+            </a>
+          </div>
+          <div data-bs-dismiss="offcanvas">
+            <a class="mobile-nav-link fw-medium px-3 mobile-menu-link d-block" href="#contact-section">
+              Contact
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- hero -->
+      <section class="position-relative pb-lg-0 d-flex justify-content-center align-items-center hero-section" id="hero-section">
+        <div class="position-relative d-flex align-items-center justify-content-center h-100 hero-inner">
+          <div class="text-center mx-auto px-4 hero-content">
+            <h1 class="fw-bold text-white mb-4 hero-title">
+              Find Your Dream Home
+            </h1>
+            <p class="mb-5 mx-auto hero-intro">
+              Discover exceptional properties in prime locations. From modern
+                                                condos to luxury estates, we help you find the perfect place to call
+                                                home.
+            </p>
+            <div class="bg-white p-4 mx-auto property-search">
+              <div class="mb-4 row search-fields">
+                <div class="col-12 col-lg-6">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-location">
+                      Location
+                    </label>
+                    <div class="position-relative">
+                      <i class="position-absolute search-location-symbol">
+                        <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" fill="currentColor">
+                          </path>
+                        </svg>
+                      </i>
+                      <input class="form-control w-100 ps-5 pe-3 search-input" id="search-location" placeholder="Enter city, neighborhood, or ZIP code" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-type">
+                      Property Type
+                    </label>
+                    <select class="form-select w-100 px-3 bg-white search-select" id="search-type">
+                      <option>
+                        All Types
+                      </option>
+                      <option>
+                        House
+                      </option>
+                      <option>
+                        Apartment
+                      </option>
+                      <option>
+                        Condo
+                      </option>
+                      <option>
+                        Townhouse
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-price">
+                      Price Range
+                    </label>
+                    <select class="form-select w-100 px-3 bg-white search-select" id="search-price">
+                      <option>
+                        Any Price
+                      </option>
+                      <option>
+                        $0 - $500K
+                      </option>
+                      <option>
+                        $500K - $1M
+                      </option>
+                      <option>
+                        $1M - $2M
+                      </option>
+                      <option>
+                        $2M+
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4 row search-fields">
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-bedrooms">
+                      Bedrooms
+                    </label>
+                    <select class="form-select w-100 px-3 bg-white search-select" id="search-bedrooms">
+                      <option>
+                        Any
+                      </option>
+                      <option>
+                        1+
+                      </option>
+                      <option>
+                        2+
+                      </option>
+                      <option>
+                        3+
+                      </option>
+                      <option>
+                        4+
+                      </option>
+                      <option>
+                        5+
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-bathrooms">
+                      Bathrooms
+                    </label>
+                    <select class="form-select w-100 px-3 bg-white search-select" id="search-bathrooms">
+                      <option>
+                        Any
+                      </option>
+                      <option>
+                        1+
+                      </option>
+                      <option>
+                        2+
+                      </option>
+                      <option>
+                        3+
+                      </option>
+                      <option>
+                        4+
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-min-area">
+                      Min Sq Ft
+                    </label>
+                    <input class="form-control w-100 px-3 search-input" id="search-min-area" placeholder="1,000" type="number"/>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <label class="d-block fw-medium mb-2 field-caption" for="search-max-area">
+                      Max Sq Ft
+                    </label>
+                    <input class="form-control w-100 px-3 search-input" id="search-max-area" placeholder="5,000" type="number"/>
+                  </div>
+                </div>
+              </div>
+              <a class="w-100 text-white py-3 fw-semibold search-submit d-block" href="#featured-properties">
+                <i class="search-submit-symbol">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Search Properties
+              </a>
+            </div>
+            <div class="mt-5 mx-auto row hero-stats">
+              <div class="col-6 col-lg-3">
+                <div class="text-center">
+                  <div class="fw-bold text-white stat-value">
+                    15,000+
+                  </div>
+                  <div class="brand-caption">
+                    Active Listings
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="text-center">
+                  <div class="fw-bold text-white stat-value">
+                    98%
+                  </div>
+                  <div class="brand-caption">
+                    Client Satisfaction
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="text-center">
+                  <div class="fw-bold text-white stat-value">
+                    500+
+                  </div>
+                  <div class="brand-caption">
+                    Expert Agents
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="text-center">
+                  <div class="fw-bold text-white stat-value">
+                    25
+                  </div>
+                  <div class="brand-caption">
+                    Years Experience
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- featured properties -->
+      <section class="listing-section" id="featured-properties">
+        <div class="container mx-auto px-4">
+          <div class="text-center section-heading">
+            <div class="d-inline-flex align-items-center mb-3 inline-cluster">
+              <div class="section-rule-intro">
+              </div>
+              <span class="py-2 rounded-pill fw-bold text-uppercase section-eyebrow">
+                Premium Collection
+              </span>
+              <div class="section-rule-outro">
+              </div>
+            </div>
+            <h2 class="mt-2 mb-4 section-title">
+              <span class="section-title-accent">
+                Featured Properties
+              </span>
+            </h2>
+            <p class="mx-auto section-intro">
+              Discover our handpicked selection of premium properties in the most
+                                                desirable locations
+            </p>
+          </div>
+          <div class="mb-5 row content-grid">
+            <div class="col-12 col-lg-4">
+              <div class="bg-white overflow-hidden property-card">
+                <div class="position-relative overflow-hidden property-card-media">
+                  <button aria-controls="property-details-1" aria-label="View details for Modern Luxury Estate" class="property-preview d-block w-100 h-100" data-bs-target="#property-details-1" data-bs-toggle="modal" type="button">
+                    <img alt="modern luxury house with pool, contemporary architecture, beautiful garden" class="w-100 h-100 object-fit-cover property-card-photo" src="./images/featured-properties-img-1.png"/>
+                  </button>
+                  <div class="property-status position-absolute text-white py-1 rounded-pill fw-medium property-status-featured">
+                    Featured
+                  </div>
+                  <button aria-label="Save property" aria-pressed="false" class="position-absolute p-2 rounded-pill favorite-control favorite-button" data-bs-toggle="button" type="button">
+                    <i class="favorite-heart">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="position-absolute text-white py-1 rounded-pill photo-count">
+                    <i class="me-1">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                    24 Photos
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="d-flex align-items-center justify-content-between card-summary">
+                    <div class="fw-bold property-card-price">
+                      $2,850,000
+                    </div>
+                    <div class="small-text">
+                      Price per sq ft: $425
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center property-card-meta">
+                    <span class="fw-medium">
+                      4 beds
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      3.5 baths
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      6,720 sqft
+                    </span>
+                  </div>
+                  <p class="fw-medium mb-2 property-card-title">
+                    Modern Luxury Estate
+                  </p>
+                  <p class="mb-3 muted">
+                    1234 Beverly Hills Drive, Beverly Hills, CA 90210
+                  </p>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img alt="John Mitchell" class="rounded-pill me-2 agent-avatar" src="./images/avatar-1.jpg"/>
+                      <span class="agent-name">
+                        John Mitchell
+                      </span>
+                    </div>
+                    <div class="d-flex property-card-actions">
+                      <a class="px-3 py-2 fw-medium tour-link d-inline-block" href="#contact-section">
+                        Schedule Tour
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="bg-white overflow-hidden property-card">
+                <div class="position-relative overflow-hidden property-card-media">
+                  <button aria-controls="property-details-2" aria-label="View details for Downtown Penthouse" class="property-preview d-block w-100 h-100" data-bs-target="#property-details-2" data-bs-toggle="modal" type="button">
+                    <img alt="elegant downtown penthouse apartment with city view, modern interior design" class="w-100 h-100 object-fit-cover property-card-photo" src="./images/featured-properties-img-2.png"/>
+                  </button>
+                  <div class="property-status position-absolute text-white py-1 rounded-pill fw-medium property-status-new">
+                    New Listing
+                  </div>
+                  <button aria-label="Save property" aria-pressed="false" class="position-absolute p-2 rounded-pill favorite-control favorite-button" data-bs-toggle="button" type="button">
+                    <i class="favorite-heart">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="position-absolute text-white py-1 rounded-pill photo-count">
+                    <i class="me-1">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                    18 Photos
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="d-flex align-items-center justify-content-between card-summary">
+                    <div class="fw-bold property-card-price">
+                      $1,425,000
+                    </div>
+                    <div class="small-text">
+                      Price per sq ft: $650
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center property-card-meta">
+                    <span class="fw-medium">
+                      3 beds
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      2.5 baths
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      2,192 sqft
+                    </span>
+                  </div>
+                  <p class="fw-medium mb-2 property-card-title">
+                    Downtown Penthouse
+                  </p>
+                  <p class="mb-3 muted">
+                    789 Metropolitan Ave, New York, NY 10001
+                  </p>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img alt="Emily Rodriguez" class="rounded-pill me-2 agent-avatar" src="./images/amanda-chen.jpg"/>
+                      <span class="agent-name">
+                        Emily Rodriguez
+                      </span>
+                    </div>
+                    <div class="d-flex property-card-actions">
+                      <a class="px-3 py-2 fw-medium tour-link d-inline-block" href="#contact-section">
+                        Schedule Tour
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="bg-white overflow-hidden property-card">
+                <div class="position-relative overflow-hidden property-card-media">
+                  <button aria-controls="property-details-3" aria-label="View details for Family Suburban Home" class="property-preview d-block w-100 h-100" data-bs-target="#property-details-3" data-bs-toggle="modal" type="button">
+                    <img alt="cozy suburban family home with front yard, traditional architecture, welcoming entrance" class="w-100 h-100 object-fit-cover property-card-photo" src="./images/featured-properties-img-3.png"/>
+                  </button>
+                  <div class="property-status position-absolute text-white py-1 rounded-pill fw-medium property-status-reduced">
+                    Price Drop
+                  </div>
+                  <button aria-label="Save property" aria-pressed="false" class="position-absolute p-2 rounded-pill favorite-control favorite-button" data-bs-toggle="button" type="button">
+                    <i class="favorite-heart">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="position-absolute text-white py-1 rounded-pill photo-count">
+                    <i class="me-1">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                    32 Photos
+                  </div>
+                </div>
+                <div class="p-4">
+                  <div class="d-flex align-items-center justify-content-between card-summary">
+                    <div class="fw-bold property-card-price">
+                      $875,000
+                    </div>
+                    <div class="text-decoration-line-through small-text">
+                      $925,000
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center property-card-meta">
+                    <span class="fw-medium">
+                      5 beds
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      4 baths
+                    </span>
+                    <span class="mx-2">
+                      •
+                    </span>
+                    <span class="fw-medium">
+                      3,845 sqft
+                    </span>
+                  </div>
+                  <p class="fw-medium mb-2 property-card-title">
+                    Family Suburban Home
+                  </p>
+                  <p class="mb-3 muted">
+                    456 Oak Tree Lane, Austin, TX 78701
+                  </p>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img alt="Michael Chen" class="rounded-pill me-2 agent-avatar" src="./images/avatar-3.jpg"/>
+                      <span class="agent-name">
+                        Michael Chen
+                      </span>
+                    </div>
+                    <div class="d-flex property-card-actions">
+                      <a class="px-3 py-2 fw-medium tour-link d-inline-block" href="#contact-section">
+                        Schedule Tour
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a class="text-white py-3 fw-semibold browse-properties d-inline-block" href="#contact-section">
+              View All Properties
+              <i class="ms-2">
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- services -->
+      <section class="bg-white service-section" id="services-tabs">
+        <div class="container mx-auto px-4">
+          <div class="text-center section-heading">
+            <div class="d-inline-flex align-items-center mb-3 inline-cluster">
+              <div class="section-rule-intro">
+              </div>
+              <span class="py-2 rounded-pill fw-bold text-uppercase section-eyebrow">
+                What We Offer
+              </span>
+              <div class="section-rule-outro">
+              </div>
+            </div>
+            <h2 class="mt-2 mb-4 section-title">
+              <span class="section-title-accent">
+                Our Services
+              </span>
+            </h2>
+            <p class="mx-auto section-intro">
+              Comprehensive real estate solutions tailored to your needs
+            </p>
+          </div>
+          <div class="mx-auto services-content">
+            <div class="d-flex flex-wrap justify-content-center service-tabs" role="tablist">
+              <button aria-controls="buying" aria-selected="true" class="service-tab px-4 py-3 fw-semibold active" data-bs-target="#buying" data-bs-toggle="tab" data-tab="buying" id="tab-buying" role="tab" type="button">
+                <i class="me-2">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Buying
+              </button>
+              <button aria-controls="selling" aria-selected="false" class="service-tab px-4 py-3 fw-semibold" data-bs-target="#selling" data-bs-toggle="tab" data-tab="selling" id="tab-selling" role="tab" type="button">
+                <i class="me-2">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Selling
+              </button>
+              <button aria-controls="renting" aria-selected="false" class="service-tab px-4 py-3 fw-semibold" data-bs-target="#renting" data-bs-toggle="tab" data-tab="renting" id="tab-renting" role="tab" type="button">
+                <i class="me-2">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Renting
+              </button>
+              <button aria-controls="investing" aria-selected="false" class="service-tab px-4 py-3 fw-semibold" data-bs-target="#investing" data-bs-toggle="tab" data-tab="investing" id="tab-investing" role="tab" type="button">
+                <i class="me-2">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zm96 96c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 64H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 96H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Investing
+              </button>
+              <button aria-controls="commercial" aria-selected="false" class="service-tab px-4 py-3 fw-semibold" data-bs-target="#commercial" data-bs-toggle="tab" data-tab="commercial" id="tab-commercial" role="tab" type="button">
+                <i class="me-2">
+                  <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+                Commercial
+              </button>
+            </div>
+            <div class="tab-content">
+              <div aria-labelledby="tab-buying" class="service-pane active tab-pane fade show" id="buying" role="tabpanel">
+                <div class="align-items-center row service-layout">
+                  <div class="col-12 col-lg-6">
+                    <div>
+                      <h3 class="fw-bold mb-4 service-title">
+                        Home Buying Made Simple
+                      </h3>
+                      <p class="service-intro">
+                        Our expert team guides you through every step of the home
+                                                                        buying process, from initial search to closing day.
+                      </p>
+                      <div class="service-features">
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Property Search
+                            </h4>
+                            <p class="muted">
+                              Access exclusive listings and get notified of new
+                                                                                                properties that match your criteria.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Financial Planning
+                            </h4>
+                            <p class="muted">
+                              Get pre-approved for mortgages and understand your
+                                                                                                budget with our financial experts.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8V128h-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48V352h28.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16V352c0 17.7 14.3 32 32 32H64c17.7 0 32-14.3 32-32V128H16zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128V352c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V144c0-8.8-7.2-16-16-16H544zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Negotiation Support
+                            </h4>
+                            <p class="muted">
+                              Our skilled negotiators ensure you get the best possible
+                                                                                                deal on your dream home.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="service-action text-white py-3 fw-semibold d-inline-block" href="#contact-section">
+                        Start Your Search
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="position-relative">
+                      <img alt="Modern luxury home with landscaped garden and driveway" class="w-100 object-fit-cover service-photo" src="./images/service-img-1.webp"/>
+                      <div class="position-absolute bg-white p-4 service-stat">
+                        <div class="service-stat-value fw-bold">
+                          98%
+                        </div>
+                        <div class="muted">
+                          Success Rate
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div aria-labelledby="tab-selling" class="service-pane tab-pane fade" id="selling" role="tabpanel">
+                <div class="align-items-center row service-layout">
+                  <div class="col-12 col-lg-6">
+                    <div>
+                      <h3 class="fw-bold mb-4 service-title">
+                        Maximize Your Home's Value
+                      </h3>
+                      <p class="service-intro">
+                        Sell your property quickly and for the best price with our
+                                                                        comprehensive marketing strategy and expert guidance.
+                      </p>
+                      <div class="service-features">
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Market Analysis
+                            </h4>
+                            <p class="muted">
+                              Get a comprehensive market analysis to price your home
+                                                                                                competitively.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Professional Marketing
+                            </h4>
+                            <p class="muted">
+                              High-quality photography, virtual tours, and
+                                                                                                multi-channel marketing campaigns.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Buyer Screening
+                            </h4>
+                            <p class="muted">
+                              We pre-qualify buyers to ensure serious inquiries and
+                                                                                                smooth transactions.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="service-action text-white py-3 fw-semibold d-inline-block" href="#contact-section">
+                        Get Home Valuation
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="position-relative">
+                      <img alt="Real estate professional presenting a model home" class="w-100 object-fit-cover service-photo" src="./images/service-img-2.webp"/>
+                      <div class="position-absolute bg-white p-4 service-stat">
+                        <div class="service-stat-value fw-bold">
+                          21 days
+                        </div>
+                        <div class="muted">
+                          Avg. Time to Sell
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div aria-labelledby="tab-renting" class="service-pane tab-pane fade" id="renting" role="tabpanel">
+                <div class="align-items-center row service-layout">
+                  <div class="col-12 col-lg-6">
+                    <div>
+                      <h3 class="fw-bold mb-4 service-title">
+                        Premium Rental Properties
+                      </h3>
+                      <p class="service-intro">
+                        Find your perfect rental home with our extensive portfolio of
+                                                                        quality properties and personalized service.
+                      </p>
+                      <div class="service-features">
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Prime Locations
+                            </h4>
+                            <p class="muted">
+                              Access rentals in the most desirable neighborhoods and
+                                                                                                communities.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Verified Properties
+                            </h4>
+                            <p class="muted">
+                              All our rental properties are thoroughly inspected and
+                                                                                                verified for quality.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              24/7 Support
+                            </h4>
+                            <p class="muted">
+                              Round-the-clock maintenance and tenant support services.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="service-action text-white py-3 fw-semibold d-inline-block" href="#contact-section">
+                        Browse Rentals
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="position-relative">
+                      <img alt="Furnished rental apartment with large windows" class="w-100 object-fit-cover service-photo" src="./images/service-img-4.png"/>
+                      <div class="position-absolute bg-white p-4 service-stat">
+                        <div class="service-stat-value fw-bold">
+                          5,000+
+                        </div>
+                        <div class="muted">
+                          Available Rentals
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div aria-labelledby="tab-investing" class="service-pane tab-pane fade" id="investing" role="tabpanel">
+                <div class="align-items-center row service-layout">
+                  <div class="col-12 col-lg-6">
+                    <div>
+                      <h3 class="fw-bold mb-4 service-title">
+                        Real Estate Investment
+                      </h3>
+                      <p class="service-intro">
+                        Build wealth through strategic real estate investments with
+                                                                        our expert guidance and market insights.
+                      </p>
+                      <div class="service-features">
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Portfolio Analysis
+                            </h4>
+                            <p class="muted">
+                              Comprehensive analysis of investment opportunities and
+                                                                                                portfolio optimization.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 112.5V422.3c0 18 10.1 35 27 41.3c87 32.5 174 10.3 261-11.9c79.8-20.3 159.6-40.7 239.3-18.9c23 6.3 48.7-9.5 48.7-33.4V89.7c0-18-10.1-35-27-41.3C462 15.9 375 38.1 288 60.3C208.2 80.6 128.4 100.9 48.7 79.1C25.6 72.8 0 88.6 0 112.5zM288 352c-44.2 0-80-43-80-96s35.8-96 80-96s80 43 80 96s-35.8 96-80 96zM64 352c35.3 0 64 28.7 64 64H64V352zm64-208c0 35.3-28.7 64-64 64V144h64zM512 304v64H448c0-35.3 28.7-64 64-64zM448 96h64v64c-35.3 0-64-28.7-64-64z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              ROI Projections
+                            </h4>
+                            <p class="muted">
+                              Detailed return on investment calculations and market
+                                                                                                forecasting.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Property Management
+                            </h4>
+                            <p class="muted">
+                              Full-service property management for hands-off
+                                                                                                investment experience.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="service-action text-white py-3 fw-semibold d-inline-block" href="#contact-section">
+                        Explore Investments
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="position-relative">
+                      <img alt="Property investor holding a model building" class="w-100 object-fit-cover service-photo" src="./images/service-img-3.webp"/>
+                      <div class="position-absolute bg-white p-4 service-stat">
+                        <div class="service-stat-value fw-bold">
+                          15%
+                        </div>
+                        <div class="muted">
+                          Avg. Annual ROI
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div aria-labelledby="tab-commercial" class="service-pane tab-pane fade" id="commercial" role="tabpanel">
+                <div class="align-items-center row service-layout">
+                  <div class="col-12 col-lg-6">
+                    <div>
+                      <h3 class="fw-bold mb-4 service-title">
+                        Commercial Real Estate
+                      </h3>
+                      <p class="service-intro">
+                        Expert commercial real estate services for businesses,
+                                                                        investors, and developers.
+                      </p>
+                      <div class="service-features">
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Office Spaces
+                            </h4>
+                            <p class="muted">
+                              Prime office locations for businesses of all sizes and
+                                                                                                industries.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 488V171.3c0-26.2 15.9-49.7 40.2-59.4L308.1 4.8c7.6-3.1 16.1-3.1 23.8 0L599.8 111.9c24.3 9.7 40.2 33.3 40.2 59.4V488c0 13.3-10.7 24-24 24H568c-13.3 0-24-10.7-24-24V224c0-17.7-14.3-32-32-32H128c-17.7 0-32 14.3-32 32V488c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm488 24l-336 0c-13.3 0-24-10.7-24-24V432H512l0 56c0 13.3-10.7 24-24 24zM128 400V336H512v64H128zm0-96V224H512l0 80H128z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Industrial Properties
+                            </h4>
+                            <p class="muted">
+                              Warehouses, manufacturing facilities, and distribution
+                                                                                                centers.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                          <div class="service-feature-badge me-3">
+                            <i class="service-feature-symbol">
+                              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z" fill="currentColor">
+                                </path>
+                              </svg>
+                            </i>
+                          </div>
+                          <div>
+                            <h4 class="fw-semibold mb-2 feature-heading">
+                              Retail Spaces
+                            </h4>
+                            <p class="muted">
+                              High-traffic retail locations and shopping center
+                                                                                                opportunities.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="service-action text-white py-3 fw-semibold d-inline-block" href="#contact-section">
+                        View Commercial Properties
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="position-relative">
+                      <img alt="Modern glass office building" class="w-100 object-fit-cover service-photo" src="./images/service-img-5.png"/>
+                      <div class="position-absolute bg-white p-4 service-stat">
+                        <div class="service-stat-value fw-bold">
+                          $2.5B
+                        </div>
+                        <div class="muted">
+                          Commercial Volume
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonials -->
+      <section class="testimonial-section" id="testimonials">
+        <div class="container mx-auto px-4">
+          <div class="text-center section-heading">
+            <div class="d-inline-flex align-items-center mb-3 inline-cluster">
+              <div class="stories-rule-intro">
+              </div>
+              <span class="py-2 rounded-pill fw-bold text-uppercase section-eyebrow">
+                Client Stories
+              </span>
+              <div class="stories-rule-outro">
+              </div>
+            </div>
+            <h2 class="mt-2 mb-4 section-title">
+              <span class="text-white">
+                What Our Clients Say
+              </span>
+            </h2>
+            <p class="mx-auto stories-intro">
+              Hear from satisfied homeowners who found their dream properties with
+                                                EliteHomes
+            </p>
+          </div>
+          <div aria-label="Client testimonials" class="position-relative mx-auto testimonials-carousel carousel slide" data-bs-interval="5000" data-bs-ride="carousel" id="testimonialCarousel">
+            <div class="carousel-container overflow-hidden">
+              <div class="testimonial-stage position-relative">
+                <div aria-hidden="true" class="testimonial-size-guide d-grid invisible" inert="">
+                  <div class="px-3 testimonial-size-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "EliteHomes made our home buying experience absolutely
+                                                                                seamless. Sarah and her team went above and beyond to help
+                                                                                us find the perfect family home in Beverly Hills. Their
+                                                                                market knowledge and negotiation skills saved us over
+                                                                                $100,000 on our purchase. We couldn't be happier!"
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Jennifer Thompson" class="rounded-pill me-3 testimonial-avatar" src="./images/jennifer-thompson.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Jennifer &amp; Mark Thompson
+                          </h4>
+                          <p class="muted">
+                            Beverly Hills Homeowners
+                          </p>
+                          <p class="small-text">
+                            Purchased $2.8M Family Estate
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 testimonial-size-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "As first-time investors, we were nervous about entering the
+                                                                                real estate market. The EliteHomes investment team provided
+                                                                                incredible guidance and helped us build a portfolio that's
+                                                                                already generating 18% annual returns. Their expertise is
+                                                                                unmatched."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="David Rodriguez" class="rounded-pill me-3 testimonial-avatar" src="./images/avatar-1.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            David Rodriguez
+                          </h4>
+                          <p class="muted">
+                            Real Estate Investor
+                          </p>
+                          <p class="small-text">
+                            $1.2M Investment Portfolio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 testimonial-size-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "Selling our Manhattan penthouse was stress-free thanks to
+                                                                                EliteHomes. They marketed it beautifully, brought qualified
+                                                                                buyers, and we sold for 15% above asking price in just 10
+                                                                                days. Their professional photography and staging made all
+                                                                                the difference."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Amanda Chen" class="rounded-pill me-3 testimonial-avatar" src="./images/amanda-chen.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Amanda Chen
+                          </h4>
+                          <p class="muted">
+                            Manhattan Seller
+                          </p>
+                          <p class="small-text">
+                            Sold $3.2M Penthouse
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 testimonial-size-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "Our company needed to relocate to a larger office space
+                                                                                quickly. EliteHomes' commercial team found us the perfect
+                                                                                building in downtown Austin with flexible lease terms and
+                                                                                great amenities. They handled everything professionally and
+                                                                                efficiently."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Michael Foster" class="rounded-pill me-3 testimonial-avatar" src="./images/avatar-3.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Michael Foster
+                          </h4>
+                          <p class="muted">
+                            CEO, TechStart Inc.
+                          </p>
+                          <p class="small-text">
+                            15,000 sq ft Office Lease
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-inner" id="testimonialSlider">
+                  <div class="px-3 carousel-item active">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "EliteHomes made our home buying experience absolutely
+                                                                                seamless. Sarah and her team went above and beyond to help
+                                                                                us find the perfect family home in Beverly Hills. Their
+                                                                                market knowledge and negotiation skills saved us over
+                                                                                $100,000 on our purchase. We couldn't be happier!"
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Jennifer Thompson" class="rounded-pill me-3 testimonial-avatar" src="./images/jennifer-thompson.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Jennifer &amp; Mark Thompson
+                          </h4>
+                          <p class="muted">
+                            Beverly Hills Homeowners
+                          </p>
+                          <p class="small-text">
+                            Purchased $2.8M Family Estate
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 carousel-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "As first-time investors, we were nervous about entering the
+                                                                                real estate market. The EliteHomes investment team provided
+                                                                                incredible guidance and helped us build a portfolio that's
+                                                                                already generating 18% annual returns. Their expertise is
+                                                                                unmatched."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="David Rodriguez" class="rounded-pill me-3 testimonial-avatar" src="./images/avatar-1.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            David Rodriguez
+                          </h4>
+                          <p class="muted">
+                            Real Estate Investor
+                          </p>
+                          <p class="small-text">
+                            $1.2M Investment Portfolio
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 carousel-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "Selling our Manhattan penthouse was stress-free thanks to
+                                                                                EliteHomes. They marketed it beautifully, brought qualified
+                                                                                buyers, and we sold for 15% above asking price in just 10
+                                                                                days. Their professional photography and staging made all
+                                                                                the difference."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Amanda Chen" class="rounded-pill me-3 testimonial-avatar" src="./images/amanda-chen.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Amanda Chen
+                          </h4>
+                          <p class="muted">
+                            Manhattan Seller
+                          </p>
+                          <p class="small-text">
+                            Sold $3.2M Penthouse
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-3 carousel-item">
+                    <div class="bg-white mx-auto testimonial-card">
+                      <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex me-3 testimonial-rating">
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                          <i>
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <use href="#rating-star">
+                              </use>
+                            </svg>
+                          </i>
+                        </div>
+                        <span class="fw-medium muted">
+                          5.0 out of 5
+                        </span>
+                      </div>
+                      <blockquote class="testimonial-quote">
+                        "Our company needed to relocate to a larger office space
+                                                                                quickly. EliteHomes' commercial team found us the perfect
+                                                                                building in downtown Austin with flexible lease terms and
+                                                                                great amenities. They handled everything professionally and
+                                                                                efficiently."
+                      </blockquote>
+                      <div class="d-flex flex-column flex-md-row text-center text-md-start align-items-center">
+                        <img alt="Michael Foster" class="rounded-pill me-3 testimonial-avatar" src="./images/avatar-3.jpg"/>
+                        <div>
+                          <h4 class="fw-bold card-title">
+                            Michael Foster
+                          </h4>
+                          <p class="muted">
+                            CEO, TechStart Inc.
+                          </p>
+                          <p class="small-text">
+                            15,000 sq ft Office Lease
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button aria-label="Prev testimonial" class="d-none d-md-block position-absolute text-white rounded-pill testimonial-prev" data-bs-slide="prev" data-bs-target="#testimonialCarousel" id="prev-testimonial" type="button">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </button>
+            <button aria-label="Next testimonial" class="d-none d-md-block position-absolute text-white rounded-pill testimonial-next" data-bs-slide="next" data-bs-target="#testimonialCarousel" id="next-testimonial" type="button">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </button>
+            <div class="d-flex justify-content-center testimonial-indicators carousel-indicators">
+              <button aria-current="true" aria-label="Testimonial 1" class="rounded-pill active" data-bs-slide-to="0" data-bs-target="#testimonialCarousel" data-slide="0" type="button">
+              </button>
+              <button aria-label="Testimonial 2" class="rounded-pill" data-bs-slide-to="1" data-bs-target="#testimonialCarousel" data-slide="1" type="button">
+              </button>
+              <button aria-label="Testimonial 3" class="rounded-pill" data-bs-slide-to="2" data-bs-target="#testimonialCarousel" data-slide="2" type="button">
+              </button>
+              <button aria-label="Testimonial 4" class="rounded-pill" data-bs-slide-to="3" data-bs-target="#testimonialCarousel" data-slide="3" type="button">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- faq -->
+      <section class="listing-section" id="faq-section">
+        <div class="container mx-auto px-4">
+          <div class="text-center section-heading">
+            <div class="d-inline-flex align-items-center mt-3 inline-cluster">
+              <div class="section-rule-intro">
+              </div>
+              <span class="py-2 rounded-pill fw-bold text-uppercase section-eyebrow">
+                Help Center
+              </span>
+              <div class="section-rule-outro">
+              </div>
+            </div>
+            <h2 class="mt-3 mb-4 section-title">
+              <span class="faq-title-accent">
+                Frequently Asked Questions
+              </span>
+            </h2>
+            <p class="mx-auto section-intro">
+              Get answers to the most common questions about buying, selling, and
+                                                investing in real estate
+            </p>
+          </div>
+          <div class="mx-auto faq-list accordion" id="faqAccordion">
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-1" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-1" data-bs-toggle="collapse" data-faq="1" type="button">
+                <span class="fw-semibold feature-heading">
+                  How do I know if I'm ready to buy a home?
+                </span>
+                <i class="faq-chevron" id="faq-icon-1">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-1">
+                <p class="faq-copy faq-answer">
+                  You're ready to buy a home when you have stable income, a good
+                                                                credit score (typically 620+), a down payment saved (usually
+                                                                10-20% of the home price), and you plan to stay in the area for
+                                                                at least 3-5 years. Our team can help assess your financial
+                                                                readiness and connect you with mortgage pre-approval services.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-2" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-2" data-bs-toggle="collapse" data-faq="2" type="button">
+                <span class="fw-semibold feature-heading">
+                  What's the best time of year to sell my home?
+                </span>
+                <i class="faq-chevron" id="faq-icon-2">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-2">
+                <p class="faq-copy faq-answer">
+                  Spring and early summer (March through June) are traditionally
+                                                                the best times to sell, as buyers are more active and homes show
+                                                                better with good weather. However, market conditions, local
+                                                                factors, and your personal timeline are more important than the
+                                                                season. We can help you determine the optimal timing based on
+                                                                current market conditions in your area.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-3" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-3" data-bs-toggle="collapse" data-faq="3" type="button">
+                <span class="fw-semibold feature-heading">
+                  How much should I offer on a house?
+                </span>
+                <i class="faq-chevron" id="faq-icon-3">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-3">
+                <p class="faq-copy faq-answer">
+                  Your offer should be based on comparable sales in the area, the
+                                                                home's condition, current market conditions, and your budget. In
+                                                                competitive markets, you might need to offer at or above asking
+                                                                price. Our agents will provide a detailed comparative market
+                                                                analysis (CMA) to help you make a competitive yet reasonable
+                                                                offer.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-4" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-4" data-bs-toggle="collapse" data-faq="4" type="button">
+                <span class="fw-semibold feature-heading">
+                  What are closing costs and who pays them?
+                </span>
+                <i class="faq-chevron" id="faq-icon-4">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-4">
+                <p class="faq-copy faq-answer">
+                  Closing costs typically range from 2-5% of the home's purchase
+                                                                price and include fees for loan origination, appraisal, title
+                                                                insurance, attorney fees, and taxes. Both buyers and sellers
+                                                                have closing costs, though they vary by location and can be
+                                                                negotiated. We'll provide a detailed breakdown of expected costs
+                                                                early in the process.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-5" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-5" data-bs-toggle="collapse" data-faq="5" type="button">
+                <span class="fw-semibold feature-heading">
+                  Should I get a home inspection?
+                </span>
+                <i class="faq-chevron" id="faq-icon-5">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-5">
+                <p class="faq-copy faq-answer">
+                  Yes, absolutely! A professional home inspection typically costs
+                                                                $300-600 but can save you thousands by identifying potential
+                                                                issues before you buy. We recommend inspections for all property
+                                                                types and can connect you with qualified, licensed inspectors in
+                                                                your area.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-6" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-6" data-bs-toggle="collapse" data-faq="6" type="button">
+                <span class="fw-semibold feature-heading">
+                  How long does it take to buy or sell a home?
+                </span>
+                <i class="faq-chevron" id="faq-icon-6">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-6">
+                <p class="faq-copy faq-answer">
+                  For buyers, the process typically takes 30-45 days from offer
+                                                                acceptance to closing, though finding the right home can take
+                                                                weeks or months. For sellers, the average time on market varies
+                                                                by location and price range, but our properties typically sell
+                                                                within 28 days. We'll provide realistic timelines based on your
+                                                                specific situation and local market conditions.
+                </p>
+              </div>
+            </div>
+            <div class="bg-white overflow-hidden faq-item">
+              <button aria-controls="faq-content-7" aria-expanded="false" class="faq-toggle w-100 py-4 text-start d-flex align-items-center justify-content-between faq-question collapsed" data-bs-target="#faq-content-7" data-bs-toggle="collapse" data-faq="7" type="button">
+                <span class="fw-semibold feature-heading">
+                  What makes EliteHomes different from other real estate
+                                                                companies?
+                </span>
+                <i class="faq-chevron" id="faq-icon-7">
+                  <svg aria-hidden="true" class="icon chevron" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" fill="currentColor">
+                    </path>
+                  </svg>
+                </i>
+              </button>
+              <div class="faq-content collapse" data-bs-parent="#faqAccordion" id="faq-content-7">
+                <p class="faq-copy faq-answer">
+                  We combine cutting-edge technology with personalized service,
+                                                                offering virtual tours, AI-powered property matching,
+                                                                comprehensive market analytics, and a dedicated team of experts
+                                                                for each client. Our 98% client satisfaction rate and average
+                                                                21-day selling time speak to our commitment to excellence and
+                                                                results.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact -->
+      <section class="bg-white position-relative overflow-hidden contact-section" id="contact-section">
+        <div class="d-none d-lg-block position-absolute overflow-hidden contact-background">
+          <div class="position-absolute rounded-pill opacity-50 contact-decoration-orb">
+          </div>
+          <div class="position-absolute rounded-pill opacity-50 contact-decoration-halo">
+          </div>
+          <div class="position-absolute w-100 h-100 contact-decoration-rings">
+            <div class="position-absolute rounded-pill contact-decoration-ring">
+            </div>
+            <div class="position-absolute rounded-pill contact-decoration-loop">
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto px-4 position-relative contact-inner">
+          <div class="text-center section-heading">
+            <div class="d-inline-flex align-items-center mt-3 inline-cluster">
+              <div class="section-rule-intro">
+              </div>
+              <span class="py-2 rounded-pill fw-bold text-uppercase contact-eyebrow">
+                Contact Us
+              </span>
+              <div class="section-rule-outro">
+              </div>
+            </div>
+            <h2 class="mt-3 mb-4 section-title">
+              <span class="section-title-accent">
+                Get In Touch
+              </span>
+            </h2>
+            <p class="mx-auto contact-intro">
+              Ready to start your real estate journey? Our expert team is here to
+                                                help you every step of the way
+            </p>
+          </div>
+          <div class="mx-auto contact-content">
+            <div class="row contact-methods">
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="contact-card bg-white p-4 contact-phone-card">
+                  <div class="contact-card-badge d-flex align-items-center justify-content-center mb-3 contact-phone-badge">
+                    <i class="text-white contact-method-symbol">
+                      <svg aria-hidden="true" class="icon icon-flipped" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M347.1 24.6c7.7-18.6 28-28.5 47.4-23.2l88 24C499.9 30.2 512 46 512 64c0 247.4-200.6 448-448 448c-18 0-33.8-12.1-38.6-29.5l-24-88c-5.3-19.4 4.6-39.7 23.2-47.4l96-40c16.3-6.8 35.2-2.1 46.3 11.6L207.3 368c70.4-33.3 127.4-90.3 160.7-160.7L318.7 167c-13.7-11.2-18.4-30-11.6-46.3l40-96z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </div>
+                  <h3 class="fw-bold mb-2">
+                    Call Us
+                  </h3>
+                  <p class="contact-method-summary">
+                    Mon-Fri from 8am to 5pm
+                  </p>
+                  <a class="fw-semibold contact-phone-link" href="tel:+15551234567">
+                    +1 (555) 123-4567
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="contact-card bg-white p-4 contact-email-card">
+                  <div class="contact-card-badge d-flex align-items-center justify-content-center mb-3 contact-email-badge">
+                    <i class="text-white contact-method-symbol">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </div>
+                  <h3 class="fw-bold mb-2">
+                    Email Us
+                  </h3>
+                  <p class="contact-method-summary">
+                    We'll respond within 24hrs
+                  </p>
+                  <a class="fw-semibold contact-email-link" href="mailto:info@elitehomes.com">
+                    info@elitehomes.com
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="contact-card bg-white p-4 contact-visit-card">
+                  <div class="contact-card-badge d-flex align-items-center justify-content-center mb-3 contact-visit-badge">
+                    <i class="text-white contact-method-symbol">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </div>
+                  <h3 class="fw-bold mb-2">
+                    Visit Us
+                  </h3>
+                  <p class="contact-method-summary">
+                    Come say hello
+                  </p>
+                  <p class="fw-semibold contact-location">
+                    Beverly Hills, CA
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="contact-card bg-white p-4 contact-chat-card">
+                  <div class="contact-card-badge d-flex align-items-center justify-content-center mb-3 contact-chat-badge">
+                    <i class="text-white contact-method-symbol">
+                      <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" fill="currentColor">
+                        </path>
+                      </svg>
+                    </i>
+                  </div>
+                  <h3 class="fw-bold mb-2">
+                    Live Chat
+                  </h3>
+                  <p class="contact-method-summary">
+                    Available 24/7
+                  </p>
+                  <button class="fw-semibold chat-trigger" data-bs-target="#demoContactModal" data-bs-toggle="modal" type="button">
+                    Start chatting →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row content-grid">
+              <div class="col-12 col-lg-4">
+                <div class="contact-sidebar">
+                  <div class="contact-information">
+                    <h3 class="fw-bold mb-4 contact-information-title">
+                      Contact Information
+                    </h3>
+                    <div class="contact-information-list">
+                      <div class="d-flex align-items-start contact-method-row">
+                        <div class="bg-white d-flex align-items-center justify-content-center flex-shrink-0 contact-method-badge">
+                          <i class="address-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </div>
+                        <div>
+                          <h4 class="fw-semibold mb-1 contact-method-heading">
+                            Address
+                          </h4>
+                          <p class="contact-address">
+                            1234 Luxury Boulevard
+                            <br/>
+                            Beverly Hills, CA 90210
+                          </p>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-start contact-method-row">
+                        <div class="bg-white d-flex align-items-center justify-content-center flex-shrink-0 contact-method-badge">
+                          <i class="phone-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </div>
+                        <div>
+                          <h4 class="fw-semibold mb-1 contact-method-heading">
+                            Phone
+                          </h4>
+                          <div class="d-flex flex-column contact-address-links">
+                            <a class="contact-address-link" href="tel:+15551234567">
+                              +1 (555) 123-4567
+                            </a>
+                            <a class="contact-address-link" href="tel:+15559876543">
+                              +1 (555) 987-6543
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-start contact-method-row">
+                        <div class="bg-white d-flex align-items-center justify-content-center flex-shrink-0 contact-method-badge">
+                          <i class="email-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </div>
+                        <div>
+                          <h4 class="fw-semibold mb-1 contact-method-heading">
+                            Email
+                          </h4>
+                          <div class="d-flex flex-column contact-address-links">
+                            <a class="contact-address-link" href="mailto:info@elitehomes.com">
+                              info@elitehomes.com
+                            </a>
+                            <a class="contact-address-link" href="mailto:support@elitehomes.com">
+                              support@elitehomes.com
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-start contact-method-row">
+                        <div class="bg-white d-flex align-items-center justify-content-center flex-shrink-0 contact-method-badge">
+                          <i class="hours-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </div>
+                        <div>
+                          <h4 class="fw-semibold mb-1 contact-method-heading">
+                            Working Hours
+                          </h4>
+                          <p class="contact-address">
+                            Mon-Fri: 8:00 AM - 8:00 PM
+                            <br/>
+                            Sat-Sun: 9:00 AM - 6:00
+                                                                                                PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-white contact-social">
+                    <h3 class="fw-bold mb-3 contact-social-title">
+                      Connect With Us
+                    </h3>
+                    <p class="mb-4 contact-social-intro">
+                      Follow us on social media for updates and insights
+                    </p>
+                    <div class="row compact-grid row-cols-5">
+                      <div class="col">
+                        <a aria-label="Facebook F information" class="d-flex align-items-center justify-content-center contact-social-link" data-bs-toggle="modal" href="#demoContactModal">
+                          <i class="text-white social-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a aria-label="Twitter information" class="d-flex align-items-center justify-content-center contact-social-link" data-bs-toggle="modal" href="#demoContactModal">
+                          <i class="text-white social-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a aria-label="Instagram information" class="d-flex align-items-center justify-content-center contact-social-link" data-bs-toggle="modal" href="#demoContactModal">
+                          <i class="text-white social-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a aria-label="Linkedin In information" class="d-flex align-items-center justify-content-center contact-social-link" data-bs-toggle="modal" href="#demoContactModal">
+                          <i class="text-white social-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <a aria-label="Youtube information" class="d-flex align-items-center justify-content-center contact-social-link" data-bs-toggle="modal" href="#demoContactModal">
+                          <i class="text-white social-symbol">
+                            <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" fill="currentColor">
+                              </path>
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-8">
+                <div>
+                  <div class="bg-white contact-form-card">
+                    <div class="contact-form-heading">
+                      <h3 class="fw-bold contact-form-title">
+                        Send us a message
+                      </h3>
+                      <p class="muted">
+                        Fill out the form below and we'll get back to you as soon as
+                                                                                possible
+                      </p>
+                    </div>
+                    <form action="#contactStatus" class="contact-form" id="contactForm" method="get">
+                      <div class="row contact-fields">
+                        <div class="col-12 col-md-6">
+                          <div>
+                            <label class="d-block fw-semibold mb-2 field-caption" for="contact-first-name">
+                              First Name
+                              <span class="required-mark">
+                                *
+                              </span>
+                            </label>
+                            <input class="form-control w-100 px-3 contact-input" id="contact-first-name" placeholder="John" required="" type="text"/>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div>
+                            <label class="d-block fw-semibold mb-2 field-caption" for="contact-last-name">
+                              Last Name
+                              <span class="required-mark">
+                                *
+                              </span>
+                            </label>
+                            <input class="form-control w-100 px-3 contact-input" id="contact-last-name" placeholder="Doe" required="" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row contact-fields">
+                        <div class="col-12 col-md-6">
+                          <div>
+                            <label class="d-block fw-semibold mb-2 field-caption" for="contact-email">
+                              Email Address
+                              <span class="required-mark">
+                                *
+                              </span>
+                            </label>
+                            <input class="form-control w-100 px-3 contact-input" id="contact-email" placeholder="john@example.com" required="" type="email"/>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div>
+                            <label class="d-block fw-semibold mb-2 field-caption" for="contact-phone">
+                              Phone Number
+                            </label>
+                            <input class="form-control w-100 px-3 contact-input" id="contact-phone" placeholder="+1 (555) 000-0000" type="tel"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <label class="d-block fw-semibold mb-2 field-caption" for="contact-service">
+                          I'm interested in
+                        </label>
+                        <select class="form-select w-100 px-3 contact-select" id="contact-service">
+                          <option>
+                            Select a service
+                          </option>
+                          <option>
+                            Buying a home
+                          </option>
+                          <option>
+                            Selling a home
+                          </option>
+                          <option>
+                            Renting a property
+                          </option>
+                          <option>
+                            Investment opportunities
+                          </option>
+                          <option>
+                            Commercial real estate
+                          </option>
+                          <option>
+                            Property management
+                          </option>
+                          <option>
+                            Market consultation
+                          </option>
+                        </select>
+                      </div>
+                      <div>
+                        <label class="d-block fw-semibold mb-2 field-caption" for="contact-message">
+                          Your Message
+                          <span class="required-mark">
+                            *
+                          </span>
+                        </label>
+                        <textarea class="form-control w-100 px-3 contact-textarea" id="contact-message" placeholder="Tell us about your real estate needs..." required="" rows="5"></textarea>
+                      </div>
+                      <div class="d-flex align-items-start p-3 newsletter-consent">
+                        <input class="newsletter-checkbox" id="newsletter" type="checkbox"/>
+                        <label class="newsletter-caption" for="newsletter">
+                          I agree to receive marketing communications and updates
+                                                                                        from EliteHomes
+                        </label>
+                      </div>
+                      <button class="w-100 text-white py-3 fw-bold d-flex align-items-center justify-content-center contact-submit" type="submit">
+                        <span>
+                          Send Message
+                        </span>
+                        <i>
+                          <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" fill="currentColor">
+                            </path>
+                          </svg>
+                        </i>
+                      </button>
+                      <p class="text-center small-text">
+                        We respect your privacy. Your information will never be
+                                                                                shared.
+                      </p>
+                      <p class="contact-demo-status" id="contactStatus" role="status">
+                        Demo only: this form does not send messages. Please use the phone or email above to contact EliteHomes.
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="text-white py-5 site-footer">
+      <div class="container mx-auto px-4">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between footer-content">
+          <div class="d-flex align-items-center inline-cluster">
+            <span class="fw-bold footer-logo">
+              EliteHomes
+            </span>
+          </div>
+          <div class="text-center text-md-start">
+            <p class="footer-copyright">
+              © 2025 EliteHomes. All rights reserved.
+            </p>
+          </div>
+          <div class="d-flex align-items-center footer-social">
+            <a aria-label="Facebook F information" class="d-flex align-items-center justify-content-center footer-social-link" data-bs-toggle="modal" href="#demoContactModal">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </a>
+            <a aria-label="Twitter information" class="d-flex align-items-center justify-content-center footer-social-link" data-bs-toggle="modal" href="#demoContactModal">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </a>
+            <a aria-label="Instagram information" class="d-flex align-items-center justify-content-center footer-social-link" data-bs-toggle="modal" href="#demoContactModal">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </a>
+            <a aria-label="Linkedin In information" class="d-flex align-items-center justify-content-center footer-social-link" data-bs-toggle="modal" href="#demoContactModal">
+              <i>
+                <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor">
+                  </path>
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+        <div class="my-4 footer-divider">
+        </div>
+        <div class="text-center footer-credit">
+          <p>
+            Made with
+            <i class="footer-heart">
+              <svg aria-hidden="true" class="icon" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="currentColor">
+                </path>
+              </svg>
+            </i>
+            for finding your
+                                                dream home
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js">
+    </script>
+    <div aria-hidden="true" aria-labelledby="demoContactTitle" class="modal fade" id="demoContactModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="demoContactTitle">
+              Contact EliteHomes
+            </h2>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-3">
+              Live chat and social profiles are not connected in this demo. You can use the contact details below.
+            </p>
+            <a class="d-block mb-2" href="tel:+15551234567">
+              +1 (555) 123-4567
+            </a>
+            <a class="d-block" href="mailto:info@elitehomes.com">
+              info@elitehomes.com
+            </a>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-describedby="property-details-1-description" aria-hidden="true" aria-labelledby="property-details-1-title" class="modal fade property-modal" id="property-details-1" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <button aria-label="Close property details" class="btn-close" data-bs-dismiss="modal" type="button">
+          </button>
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-7 property-visual">
+                <img alt="modern luxury house with pool, contemporary architecture, beautiful garden" src="./images/featured-properties-img-1.png"/>
+                <span>
+                  Featured
+                </span>
+                <div class="listing-location">
+                  <p>
+                    Beverly Hills
+                  </p>
+                  <span>
+                    California
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-5 listing-info">
+                <div>
+                  <h2 class="modal-title" id="property-details-1-title">
+                    Modern Luxury Estate
+                  </h2>
+                  <p>
+                    1234 Beverly Hills Drive, Beverly Hills, CA 90210
+                  </p>
+                </div>
+                <div class="price-block">
+                  <p>
+                    Asking price
+                  </p>
+                  <p class="asking-price">
+                    $2,850,000
+                  </p>
+                </div>
+                <dl>
+                  <div>
+                    <dt>
+                      Bedrooms
+                    </dt>
+                    <dd>
+                      4
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Bathrooms
+                    </dt>
+                    <dd>
+                      3.5
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Square feet
+                    </dt>
+                    <dd>
+                      6,720
+                    </dd>
+                  </div>
+                </dl>
+                <p class="listing-description" id="property-details-1-description">
+                  A contemporary estate with a pool, generous living space, and room to enjoy the outdoors.
+                </p>
+                <div class="listing-contact">
+                  <div class="listing-agent">
+                    <img alt="John Mitchell" src="./images/avatar-1.jpg"/>
+                    <div>
+                      <p>
+                        Listing agent
+                      </p>
+                      <p>
+                        John Mitchell
+                      </p>
+                    </div>
+                  </div>
+                  <a class="btn property-inquiry" href="mailto:info@elitehomes.com?subject=Viewing%20inquiry%3A%20Modern%20Luxury%20Estate">
+                    Email about this home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-describedby="property-details-2-description" aria-hidden="true" aria-labelledby="property-details-2-title" class="modal fade property-modal" id="property-details-2" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <button aria-label="Close property details" class="btn-close" data-bs-dismiss="modal" type="button">
+          </button>
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-7 property-visual">
+                <img alt="elegant downtown penthouse apartment with city view, modern interior design" src="./images/featured-properties-img-2.png"/>
+                <span>
+                  New Listing
+                </span>
+                <div class="listing-location">
+                  <p>
+                    New York
+                  </p>
+                  <span>
+                    New York
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-5 listing-info">
+                <div>
+                  <h2 class="modal-title" id="property-details-2-title">
+                    Downtown Penthouse
+                  </h2>
+                  <p>
+                    789 Metropolitan Ave, New York, NY 10001
+                  </p>
+                </div>
+                <div class="price-block">
+                  <p>
+                    Asking price
+                  </p>
+                  <p class="asking-price">
+                    $1,425,000
+                  </p>
+                </div>
+                <dl>
+                  <div>
+                    <dt>
+                      Bedrooms
+                    </dt>
+                    <dd>
+                      3
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Bathrooms
+                    </dt>
+                    <dd>
+                      2.5
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Square feet
+                    </dt>
+                    <dd>
+                      2,192
+                    </dd>
+                  </div>
+                </dl>
+                <p class="listing-description" id="property-details-2-description">
+                  A downtown penthouse with expansive city views and a modern interior.
+                </p>
+                <div class="listing-contact">
+                  <div class="listing-agent">
+                    <img alt="Emily Rodriguez" src="./images/amanda-chen.jpg"/>
+                    <div>
+                      <p>
+                        Listing agent
+                      </p>
+                      <p>
+                        Emily Rodriguez
+                      </p>
+                    </div>
+                  </div>
+                  <a class="btn property-inquiry" href="mailto:info@elitehomes.com?subject=Viewing%20inquiry%3A%20Downtown%20Penthouse">
+                    Email about this home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-describedby="property-details-3-description" aria-hidden="true" aria-labelledby="property-details-3-title" class="modal fade property-modal" id="property-details-3" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <button aria-label="Close property details" class="btn-close" data-bs-dismiss="modal" type="button">
+          </button>
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-7 property-visual">
+                <img alt="cozy suburban family home with front yard, traditional architecture, welcoming entrance" src="./images/featured-properties-img-3.png"/>
+                <span>
+                  Price Drop
+                </span>
+                <div class="listing-location">
+                  <p>
+                    Austin
+                  </p>
+                  <span>
+                    Texas
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-5 listing-info">
+                <div>
+                  <h2 class="modal-title" id="property-details-3-title">
+                    Family Suburban Home
+                  </h2>
+                  <p>
+                    456 Oak Tree Lane, Austin, TX 78701
+                  </p>
+                </div>
+                <div class="price-block">
+                  <p>
+                    Asking price
+                  </p>
+                  <p class="asking-price">
+                    $875,000
+                  </p>
+                </div>
+                <dl>
+                  <div>
+                    <dt>
+                      Bedrooms
+                    </dt>
+                    <dd>
+                      5
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Bathrooms
+                    </dt>
+                    <dd>
+                      4
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Square feet
+                    </dt>
+                    <dd>
+                      3,845
+                    </dd>
+                  </div>
+                </dl>
+                <p class="listing-description" id="property-details-3-description">
+                  A welcoming suburban home with a covered front porch and space for family living.
+                </p>
+                <div class="listing-contact">
+                  <div class="listing-agent">
+                    <img alt="Michael Chen" src="./images/avatar-3.jpg"/>
+                    <div>
+                      <p>
+                        Listing agent
+                      </p>
+                      <p>
+                        Michael Chen
+                      </p>
+                    </div>
+                  </div>
+                  <a class="btn property-inquiry" href="mailto:info@elitehomes.com?subject=Viewing%20inquiry%3A%20Family%20Suburban%20Home">
+                    Email about this home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
