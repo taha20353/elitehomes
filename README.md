@@ -4,7 +4,7 @@ EliteHomes is a responsive real estate landing page built with HTML, CSS, and
 Bootstrap 5.3.8. It features property listings, real estate services, client
 testimonials, frequently asked questions, and a contact section.
 
-## Demo :
+## Demo 
 https://taha20353.github.io/elitehomes/
 
 ## Extra features and improvements
